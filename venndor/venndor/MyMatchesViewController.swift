@@ -268,7 +268,9 @@ class MyMatchesViewController: UIViewController, UIScrollViewDelegate {
                 }
                 if let img = img {
                     match.thumbnail = img
-                    imgView.image = img
+                    dispatch_async(dispatch_get_main_queue()) {
+                        imgView.image = img
+                    }
 //                    matchContainer.addSubview(imgView)
 //                    matchContainer.sendSubviewToBack(imgView)
                     
