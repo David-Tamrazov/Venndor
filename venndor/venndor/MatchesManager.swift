@@ -121,19 +121,19 @@ class MatchesManager: NSObject {
                         
                         
                         
-                        if match.dateMatched.timeIntervalSinceNow / 60 * -1 < 1440 {
-                                                        
+//                        if match.dateMatched.timeIntervalSinceNow / 60 * -1 < 1440 {
+                        
                             matchesArray.append(match)
-                        }
-                            
-                        else {
-                            MatchesManager.globalManager.deleteMatchById(match.id!) { error in
-                                guard error == nil else {
-                                    print("Error deleting match from server: \(error)")
-                                    return
-                                }
-                            }
-                        }
+//                        }
+//                            
+//                        else {
+//                            MatchesManager.globalManager.deleteMatchById(match.id!) { error in
+//                                guard error == nil else {
+//                                    print("Error deleting match from server: \(error)")
+//                                    return
+//                                }
+//                            }
+//                        }
                         
                     }
                     completionHandler(matchesArray, nil)
